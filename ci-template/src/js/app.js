@@ -1,6 +1,9 @@
-// TODO: write your code here
-import sum from './basic';
+import GameSavingLoader from './gameSavingLoader';
 
-console.log('worked');
-
-console.log(sum([1, 2]));
+GameSavingLoader.load()
+  .then((saving) => {
+    console.log(saving);
+  })
+  .catch((error) => {
+    console.error(error);
+  });

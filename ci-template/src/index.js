@@ -1,5 +1,10 @@
 import './css/style.css';
+import GameSavingLoader from './js/gameSavingLoader';
 
-import './js/app';
-
-// TODO: write your code in app.js
+GameSavingLoader.load()
+  .then((saving) => {
+    console.log(saving);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
